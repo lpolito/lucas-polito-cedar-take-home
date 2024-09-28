@@ -9,8 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        textPrimary: "var(--color-textPrimary)",
+        textSecondary: "var(--color-textSecondary)",
+        textTertiary: "var(--color-textTertiary)",
+        error: "var(--color-error)",
+        buttonPrimaryBg: "var(--color-buttonPrimaryBg)",
+        buttonPrimaryText: "var(--color-buttonPrimaryText)",
       },
     },
     screens: {
