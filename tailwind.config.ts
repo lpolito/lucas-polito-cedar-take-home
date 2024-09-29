@@ -16,12 +16,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        textPrimary: "var(--color-textPrimary)",
-        textSecondary: "var(--color-textSecondary)",
-        textTertiary: "var(--color-textTertiary)",
         error: "var(--color-error)",
         buttonPrimaryBg: "var(--color-buttonPrimaryBg)",
         buttonPrimaryText: "var(--color-buttonPrimaryText)",
+      },
+      textColor: {
+        primary: "var(--color-textPrimary)",
+        secondary: "var(--color-textSecondary)",
+        tertiary: "var(--color-textTertiary)",
       },
       spacing: {
         144: pxToRem(576),
@@ -31,6 +33,14 @@ const config: Config = {
         // but it feels like a typo from 768px?
         // TODO Ask designers if this is correct
         md: "786px",
+      },
+      fontSize: {
+        // [font-size, line-height]
+        lg: [pxToRem(20), pxToRem(24)],
+        xl: [pxToRem(28), pxToRem(36)],
+      },
+      letterSpacing: {
+        normal: pxToRem(0.2),
       },
     },
   },
