@@ -26,6 +26,7 @@ const config: Config = {
         tertiary: "var(--color-textTertiary)",
       },
       spacing: {
+        120: pxToRem(480),
         144: pxToRem(576),
       },
       screens: {
