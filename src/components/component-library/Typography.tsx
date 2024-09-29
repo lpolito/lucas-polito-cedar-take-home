@@ -23,28 +23,30 @@ const colorClasses = {
   error: "text-error",
 };
 
+// TODO Make Typography / TypographyProps generic, so that we can get additional props based on the `component` prop
 export interface TypographyProps {
   children: React.ReactNode;
   size?: TypographySize;
   color?: TypographyColor;
   component?: keyof JSX.IntrinsicElements;
   className?: string;
+  // TODO remove this after making Typography generic
+  style?: React.CSSProperties;
 }
 
 export const Typography = ({
-  children,
   size = "md",
   color = "primary",
   component: Component = "span",
   className,
+  ...rest
 }: TypographyProps) => {
   const sizeClass = sizeClasses[size];
   const colorClass = colorClasses[color];
   return (
     <Component
       className={`tracking-normal ${sizeClass} ${colorClass} ${className}`}
-    >
-      {children}
-    </Component>
+      {...rest}
+    />
   );
 };
