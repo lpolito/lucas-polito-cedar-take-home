@@ -1,5 +1,5 @@
 "use client";
-import { forwardRef } from "react";
+import { forwardRef, useState } from "react";
 import { TextField, TextFieldProps } from "./component-library";
 
 export interface FormFieldProps extends TextFieldProps {
@@ -27,13 +27,13 @@ const _FormField = (
   }: FormFieldProps,
   ref: React.Ref<HTMLInputElement>,
 ) => {
-  const hasValue = Boolean(rest.value);
+  const [touched, setTouched] = useState(false);
 
   // Weird specificity happening with default border, mark important
   // TODO don't use !important here
   const inputErrorClass = error ? "!border-error" : "";
 
-  const icon = error ? <ErrorIcon /> : hasValue ? <SuccessIcon /> : iconProp;
+  const icon = error ? <ErrorIcon /> : touched ? <SuccessIcon /> : iconProp;
 
   return (
     <TextField
@@ -52,9 +52,11 @@ const _FormField = (
       inputRef={ref}
       onBlur={(e) => {
         onBlur?.(e);
+        setTouched(true);
       }}
       onChange={(e) => {
         onChange?.(e);
+        setTouched(true);
       }}
     />
   );

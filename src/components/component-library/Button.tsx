@@ -40,6 +40,7 @@ export const Button = ({
   size = "base",
   variant = "default",
   color = "primary",
+  type = "button",
   fullWidth,
   className,
   children,
@@ -54,6 +55,7 @@ export const Button = ({
   return (
     <button
       className={`flex items-center justify-center ${sizeClass} ${variantClass} ${variantColorClass} ${fullWidthClass} ${className || ""}`}
+      type={type}
       {...props}
     >
       {typeof children === "string" ? (
