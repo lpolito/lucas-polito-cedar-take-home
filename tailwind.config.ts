@@ -17,8 +17,11 @@ const config: Config = {
     extend: {
       colors: {
         error: "var(--color-error)",
-        buttonPrimaryBg: "var(--color-buttonPrimaryBg)",
-        buttonPrimaryText: "var(--color-buttonPrimaryText)",
+        buttonDefaultPrimaryBg: "var(--color-buttonDefaultPrimaryBg)",
+        buttonDefaultPrimaryBgHover: "var(--color-buttonDefaultPrimaryBgHover)",
+        buttonDefaultPrimaryBgActive:
+          "var(--color-buttonDefaultPrimaryBgActive)",
+        buttonDefaultPrimaryText: "var(--color-buttonDefaultPrimaryText)",
       },
       textColor: {
         primary: "var(--color-textPrimary)",

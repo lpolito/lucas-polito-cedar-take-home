@@ -1,4 +1,4 @@
-import { Typography } from "../../../components/component-library";
+import { Button, Typography } from "../../../components/component-library";
 
 export default function Page() {
   const { patientFirstName, totalAmountDueCents, numberOfItems } = invoice;
@@ -20,14 +20,17 @@ export default function Page() {
             bill details.
           </Typography>
         </div>
-        <span className="flex flex-row items-center justify-between">
-          <Typography color="tertiary" className="font-bold">
-            Total due
-          </Typography>
-          <Typography size="xl" color="secondary" className="font-bold">
-            ${formatCentsToDollarString(totalAmountDueCents)}
-          </Typography>
-        </span>
+        <div className="flex flex-col gap-6">
+          <span className="flex flex-row items-center justify-between">
+            <Typography color="tertiary" className="font-bold">
+              Total due
+            </Typography>
+            <Typography size="xl" color="secondary" className="font-bold">
+              ${formatCentsToDollarString(totalAmountDueCents)}
+            </Typography>
+          </span>
+          <Button fullWidth>Pay total</Button>
+        </div>
       </div>
     </section>
   );

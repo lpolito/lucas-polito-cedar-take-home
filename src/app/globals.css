@@ -9,8 +9,12 @@
     --color-textSecondary: #13126c;
     --color-textTertiary: #65657b;
     --color-error: #c34648;
-    --color-buttonPrimaryBg: #3667e9;
-    --color-buttonPrimaryText: #ffffff;
+    --color-buttonDefaultPrimaryBg: #3667e9;
+    /* TODO hover is 5% darker then primary, get actual spec from design */
+    --color-buttonDefaultPrimaryBgHover: #295de8;
+    /* TODO active is 10% darker then primary, get actual spec from design */
+    --color-buttonDefaultPrimaryBgActive: #1c53e6;
+    --color-buttonDefaultPrimaryText: #ffffff;
   }
 }
 
