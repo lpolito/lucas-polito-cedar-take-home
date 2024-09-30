@@ -6,6 +6,7 @@ export interface StepperProps
   label: string;
 }
 
+// TODO make Stepper take an array of steps, where the step number dictates the step displayed - better DX / more reusable
 export const Stepper = ({
   stepNumber,
   label,
