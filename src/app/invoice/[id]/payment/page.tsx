@@ -1,5 +1,5 @@
 import { Button, LayoutCard } from "../../../../components/component-library";
-import { TextField } from "../../../../components/component-library/TextField";
+import { TextField } from "../../../../components/component-library";
 
 export default function Page() {
   return (
