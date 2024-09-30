@@ -39,6 +39,7 @@ export interface TypographyProps {
   style?: React.CSSProperties;
 }
 
+// TODO forward ref
 /**
  * Typography component for all text elements.
  *

@@ -35,6 +35,7 @@ export interface ButtonProps
   fullWidth?: boolean;
 }
 
+// TODO disabled styling
 export const Button = ({
   size = "base",
   variant = "default",

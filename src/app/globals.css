@@ -30,3 +30,5 @@ body {
   background: var(--color-background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* TODO add global focus-visible style for keyboard nav to match app colors and design */

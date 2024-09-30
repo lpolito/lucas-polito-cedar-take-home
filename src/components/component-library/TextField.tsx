@@ -23,6 +23,7 @@ export interface TextFieldProps
   style?: React.CSSProperties;
 }
 
+// TODO forward ref
 export const TextField = ({
   inputRef,
   value,
@@ -71,7 +72,7 @@ export const TextField = ({
         {...inputContainerRest}
       >
         <input
-          className={`rounded-lg border border-solid border-inputBorderDefault px-4 py-3 ${fullWidthClass} ${inputClassname || ""}`}
+          className={`box-border h-12 rounded-lg border border-solid border-inputBorderDefault px-4 py-3 ${fullWidthClass} ${inputClassname || ""}`}
           {...inputRest}
           value={value}
           onChange={onChange}
