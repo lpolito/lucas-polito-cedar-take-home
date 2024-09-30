@@ -18,6 +18,7 @@ export interface TextFieldProps
     "id" | "value" | "onChange" | "onBlur" | "name"
   >;
   inputContainerProps?: React.HTMLAttributes<HTMLDivElement>;
+  fullWidth?: boolean;
   className?: string;
   style?: React.CSSProperties;
 }
@@ -36,18 +37,22 @@ export const TextField = ({
   iconContainerProps,
   inputProps,
   inputContainerProps,
+  fullWidth,
   className,
   style,
 }: TextFieldProps) => {
   const id = useId();
   const { className: labelClassname, ...labelRest } = labelProps || {};
+  const { className: inputClassname, ...inputRest } = inputProps || {};
   const { className: inputContainerClassname, ...inputContainerRest } =
     inputContainerProps || {};
   const { className: iconContainerClassname, ...iconContainerRest } =
     iconContainerProps || {};
 
+  const fullWidthClass = fullWidth ? "w-full" : "";
+
   return (
-    <div className={className} style={style}>
+    <div className={`flex flex-col gap-2 ${className || ""}`} style={style}>
       {label && (
         <Typography
           size="sm"
@@ -66,7 +71,8 @@ export const TextField = ({
         {...inputContainerRest}
       >
         <input
-          {...inputProps}
+          className={`rounded-lg border border-solid border-inputBorderDefault px-4 py-3 ${fullWidthClass} ${inputClassname || ""}`}
+          {...inputRest}
           value={value}
           onChange={onChange}
           onBlur={onBlur}

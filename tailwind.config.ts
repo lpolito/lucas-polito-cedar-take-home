@@ -17,11 +17,14 @@ const config: Config = {
     extend: {
       colors: {
         error: "var(--color-error)",
+
         buttonDefaultPrimaryBg: "var(--color-buttonDefaultPrimaryBg)",
         buttonDefaultPrimaryBgHover: "var(--color-buttonDefaultPrimaryBgHover)",
         buttonDefaultPrimaryBgActive:
           "var(--color-buttonDefaultPrimaryBgActive)",
         buttonDefaultPrimaryText: "var(--color-buttonDefaultPrimaryText)",
+
+        inputBorderDefault: "var(--color-inputBorderDefault)",
       },
       borderColor: {
         default: "var(--color-borderDefault)",
