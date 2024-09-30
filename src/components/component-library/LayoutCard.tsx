@@ -7,7 +7,7 @@ export interface LayoutCardProps extends React.HTMLAttributes<HTMLDivElement> {}
  */
 export const LayoutCard = ({ className, ...rest }: LayoutCardProps) => (
   <div
-    className={`md:max-w-144 border-default w-full border-b border-solid bg-white px-8 md:rounded-2xl md:border-b-0 md:px-12 md:py-4 ${className}`}
+    className={`md:max-w-144 border-default w-full border-b border-solid bg-white px-8 md:rounded-2xl md:border-b-0 md:px-12 md:py-4 ${className || ""}`}
     {...rest}
   />
 );

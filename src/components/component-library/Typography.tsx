@@ -56,7 +56,7 @@ export const Typography = ({
   const colorClass = colorClasses[color];
   return (
     <Component
-      className={`tracking-normal ${sizeClass} ${colorClass} ${className}`}
+      className={`tracking-normal ${sizeClass} ${colorClass} ${className || ""}`}
       {...rest}
     />
   );
