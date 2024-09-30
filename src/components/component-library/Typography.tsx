@@ -1,3 +1,6 @@
+// Define Typography sizes, as opposed to variants, which correlate to the font size.
+// Prefer sizes over variants so that we have to be explicit when choosing the
+// underlying element type (via `component` prop).
 export const TypographySizes = ["sm", "base", "lg", "xl"] as const;
 export type TypographySize = (typeof TypographySizes)[number];
 
@@ -36,6 +39,12 @@ export interface TypographyProps {
   style?: React.CSSProperties;
 }
 
+/**
+ * Typography component for all text elements.
+ *
+ * Size directly correlates to the font size, and not the underlying element
+ * (dictated by `component` prop, default being "span").
+ */
 export const Typography = ({
   size = "base",
   color = "inherit",
