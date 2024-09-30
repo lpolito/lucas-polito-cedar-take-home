@@ -139,6 +139,8 @@ const PaymentForm = ({ form, onContinue }: PaymentFormProps) => {
           error={!!errors.zipCode}
           errorMessage={errors.zipCode?.message}
         />
+      </div>
+      <div className="mb-8 mt-6">
         <Button
           fullWidth
           onClick={(e) => {
@@ -195,7 +197,7 @@ const Confirmation = ({
           </Typography>
         )}
         <Button type="submit" fullWidth>
-          Continue
+          Pay ${formatCentsToDollarString(totalAmountDueCents)}
         </Button>
       </div>
     </div>

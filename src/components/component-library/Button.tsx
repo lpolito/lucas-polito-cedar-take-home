@@ -58,13 +58,9 @@ export const Button = ({
       type={type}
       {...props}
     >
-      {typeof children === "string" ? (
-        <Typography size={size} className="font-bold">
-          {children}
-        </Typography>
-      ) : (
-        children
-      )}
+      <Typography size={size} className="font-bold">
+        {children}
+      </Typography>
     </button>
   );
 };
