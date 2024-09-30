@@ -1,6 +1,10 @@
+"use client";
+import { useRouter } from "next/navigation";
 import { Button, Typography } from "../../../components/component-library";
 
-export default function Page() {
+export default function Page({ params: { id } }: { params: { id: string } }) {
+  const router = useRouter();
+
   const { patientFirstName, totalAmountDueCents, numberOfItems } = invoice;
   return (
     <section className="flex flex-col items-center pt-24">
@@ -29,7 +33,12 @@ export default function Page() {
               ${formatCentsToDollarString(totalAmountDueCents)}
             </Typography>
           </span>
-          <Button fullWidth>Pay total</Button>
+          <Button
+            fullWidth
+            onClick={() => router.push(`/invoice/${id}/payment`)}
+          >
+            Pay total
+          </Button>
         </div>
       </div>
     </section>
@@ -46,6 +55,7 @@ type Invoice = {
   totalAmountDueCents: number;
 };
 
+// This is a mock of the invoice data that would be fetched on page load
 const invoice: Invoice = {
   id: 1,
   patientFirstName: "Taylor",
