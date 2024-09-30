@@ -23,6 +23,9 @@ const config: Config = {
           "var(--color-buttonDefaultPrimaryBgActive)",
         buttonDefaultPrimaryText: "var(--color-buttonDefaultPrimaryText)",
       },
+      borderColor: {
+        default: "var(--color-borderDefault)",
+      },
       textColor: {
         primary: "var(--color-textPrimary)",
         secondary: "var(--color-textSecondary)",

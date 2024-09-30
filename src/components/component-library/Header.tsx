@@ -5,7 +5,7 @@ export interface HeaderProps extends React.HTMLAttributes<HTMLDivElement> {}
 export function Header({ className, ...rest }: HeaderProps) {
   return (
     <header
-      className={`flex h-20 w-full flex-row content-center border-b border-solid border-[#E7E9EF] bg-white px-4 ${className}`}
+      className={`border-default flex h-20 w-full flex-row content-center border-b border-solid bg-white px-4 ${className}`}
       {...rest}
     />
   );
