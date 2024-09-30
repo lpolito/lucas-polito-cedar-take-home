@@ -4,7 +4,7 @@ export default function Page() {
   const { patientFirstName, totalAmountDueCents, numberOfItems } = invoice;
   return (
     <section className="flex flex-col items-center pt-24">
-      <div className="md:w-120 flex flex-col justify-center gap-12 px-6">
+      <div className="md:max-w-120 flex flex-col justify-center gap-12 px-6">
         <div className="flex flex-col gap-4 text-center">
           <Typography
             size="xl"
