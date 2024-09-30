@@ -1,10 +1,15 @@
-import { Button, LayoutCard } from "../../../../components/component-library";
+import {
+  Button,
+  LayoutCard,
+  Stepper,
+} from "../../../../components/component-library";
 import { TextField } from "../../../../components/component-library";
 
 export default function Page() {
   return (
     <section className="flex flex-col items-center md:pt-8">
       <LayoutCard>
+        <Stepper stepNumber={1} label="Payment information" />
         <form className="flex flex-col gap-4">
           <TextField label="Card number" fullWidth />
           <div className="flex flex-row gap-4">
