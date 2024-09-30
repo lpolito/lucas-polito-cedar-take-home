@@ -1,14 +1,16 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { Button, Typography } from "../../../components/component-library";
+import { MOCK_INVOICE } from "../../../store";
+import { formatCentsToDollarString } from "../../../utils";
 
 export default function Page({ params: { id } }: { params: { id: string } }) {
   const router = useRouter();
 
-  const { patientFirstName, totalAmountDueCents, numberOfItems } = invoice;
+  const { patientFirstName, totalAmountDueCents, numberOfItems } = MOCK_INVOICE;
   return (
     <section className="flex flex-col items-center pt-24">
-      <div className="md:max-w-120 flex flex-col justify-center gap-12 px-6">
+      <div className="flex flex-col justify-center gap-12 px-6 md:max-w-120">
         <div className="flex flex-col gap-4 text-center">
           <Typography
             size="xl"
@@ -44,21 +46,3 @@ export default function Page({ params: { id } }: { params: { id: string } }) {
     </section>
   );
 }
-
-const formatCentsToDollarString = (cents: number) =>
-  (Math.round(cents) / 100).toFixed(2);
-
-type Invoice = {
-  id: number;
-  patientFirstName: string;
-  numberOfItems: number;
-  totalAmountDueCents: number;
-};
-
-// This is a mock of the invoice data that would be fetched on page load
-const invoice: Invoice = {
-  id: 1,
-  patientFirstName: "Taylor",
-  numberOfItems: 6,
-  totalAmountDueCents: 60000,
-};
