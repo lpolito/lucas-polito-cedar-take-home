@@ -25,6 +25,8 @@ const config: Config = {
         buttonDefaultPrimaryText: "var(--color-buttonDefaultPrimaryText)",
 
         inputBorderDefault: "var(--color-inputBorderDefault)",
+
+        stepperBg: "var(--color-stepperBg)",
       },
       borderColor: {
         default: "var(--color-borderDefault)",
